@@ -9,18 +9,23 @@
 </head>
 <body>
 	<div>
-		<form action="/exampleWebApp51/application/proizvodjac/edit">
+	${error}
+		<form action="/exampleWebApp51/application/proizvodjac/edit-store">
 			<label>pib</label>
 			<input type="text" name="pib" value="${przv.pib}" readonly="readonly" />
+			<br>
 			<label>maticni broj</label>
-			<input type="text" name="matBroj" value="${przv.matBroj}" readonly="readonly" />
+			<input type="text" name="matBroj" value="${przv.matBroj}" />
+			<br>
 			<label>naziv</label>
-			<input type="text" name="naziv" value="${przv.naziv}" readonly="readonly" />
+			<input type="text" name="naziv" value="${przv.naziv}" />
+			<br>
 			<label>adresa</label>
-			<input type="text" name="adresa" value="${przv.adres}" readonly="readonly" />
+			<input type="text" name="adresa" value="${przv.adresa}" />
+			<br>
 			<label>mesto</label>
-			<input type="text" name="mesto" value="${przv.mesto.ptt}" readonly="readonly" />
-			
+			<input type="text" name="mesto" value="${przv.mesto.ptt}" />
+			<br>
 			<div>
 				<input type="submit" name="action" value="cancel">
 			</div>

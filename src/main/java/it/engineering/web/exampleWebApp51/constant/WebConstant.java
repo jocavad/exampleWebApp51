@@ -14,4 +14,11 @@ public interface WebConstant {
 	
 	public static final String PAGE_PROIZV_VIEW="/WEB-INF/jsp/proizv/view/proizv-view.jsp";
 	public static final String PATH_PROIZV_VIEW="/proizvodjac/view";
+	
+	public static final String PAGE_PROIZV_EDIT="/WEB-INF/jsp/proizv/edit/proizv-edit.jsp";
+	public static final String PATH_PROIZV_EDIT="/proizvodjac/edit";
+	
+	public static final String PATH_PROIZV_EDIT_STORE="/proizvodjac/edit-store";
+
+	
 }

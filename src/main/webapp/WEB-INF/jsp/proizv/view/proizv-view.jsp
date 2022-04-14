@@ -26,7 +26,7 @@
 			<input type="text" name="mesto" value="${przv.mesto.naziv}" readonly="readonly" />
 			<br>
 			<div>
-				<input type="submit" name="action" value="back">
+				<input type="submit" name="action" value="cancel">
 			</div>
 			<div>
 				<input type="submit" name="action" value="edit">

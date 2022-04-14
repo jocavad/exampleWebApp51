@@ -31,6 +31,17 @@ public class Proizvodjac implements Serializable {
 	public Proizvodjac() {
 	}
 
+	public Proizvodjac(int pib, String naziv, String adresa, int matBroj, Mesto mesto) {
+		super();
+		this.pib = pib;
+		this.naziv = naziv;
+		this.adresa = adresa;
+		this.matBroj = matBroj;
+		this.mesto = mesto;
+	}
+
+
+
 	public int getPib() {
 		return this.pib;
 	}
