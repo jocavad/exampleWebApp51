@@ -16,7 +16,7 @@ public class UserRepository {
 							.createEntityManager();
 		
 		List<User> users = em
-				.createQuery("select m from Manufacturer m", User.class)
+				.createQuery("select m from user m", User.class)
 				.getResultList();
 		
 		em.close();

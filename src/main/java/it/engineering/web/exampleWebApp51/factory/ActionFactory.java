@@ -4,6 +4,8 @@ import it.engineering.web.exampleWebApp51.action.AbstractAction;
 import it.engineering.web.exampleWebApp51.action.login.LoginGetAction;
 import it.engineering.web.exampleWebApp51.action.login.LoginPostAction;
 import it.engineering.web.exampleWebApp51.action.login.LogoutAction;
+import it.engineering.web.exampleWebApp51.action.proizvodjac.view.ProizvodjacViewAction;
+import it.engineering.web.exampleWebApp51.action.proizvodjac.view.ProizvodjacViewAllAction;
 import it.engineering.web.exampleWebApp51.constant.WebConstant;
 
 public class ActionFactory {
@@ -23,6 +25,12 @@ AbstractAction action = null;
 			}
 		case WebConstant.PATH_LOGOUT:
 			action = new LogoutAction();
+			break;
+		case WebConstant.PATH_PROIZV_VIEW_ALL:
+			action = new ProizvodjacViewAllAction();
+			break;
+		case WebConstant.PATH_PROIZV_VIEW:
+			action = new ProizvodjacViewAction();
 			break;
 		default:
 			break;

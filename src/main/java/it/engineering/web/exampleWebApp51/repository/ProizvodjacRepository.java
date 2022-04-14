@@ -17,7 +17,7 @@ public class ProizvodjacRepository {
 							.createEntityManager();
 		
 		List<Proizvodjac> proizvodjaci = em
-				.createQuery("select m from Manufacturer m", Proizvodjac.class)
+				.createQuery("select m from Proizvodjac m", Proizvodjac.class)
 				.getResultList();
 		
 		em.close();

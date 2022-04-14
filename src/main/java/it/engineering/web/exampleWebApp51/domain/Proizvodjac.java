@@ -24,7 +24,7 @@ public class Proizvodjac implements Serializable {
 	@Column(name="mat_broj")
 	private int matBroj;
 
-	@ManyToOne(fetch = FetchType.LAZY )
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="ptt")
 	private Mesto mesto;
 	
