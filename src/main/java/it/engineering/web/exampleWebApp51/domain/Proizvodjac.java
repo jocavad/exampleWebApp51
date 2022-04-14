@@ -17,12 +17,13 @@ public class Proizvodjac implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int pib;
 
+	private String naziv;
+	
 	private String adresa;
 
 	@Column(name="mat_broj")
 	private int matBroj;
 
-	//bi-directional many-to-one association to Mesto
 	@ManyToOne(fetch = FetchType.LAZY )
 	@JoinColumn(name="ptt")
 	private Mesto mesto;
@@ -46,6 +47,14 @@ public class Proizvodjac implements Serializable {
 		this.adresa = adresa;
 	}
 
+	public String getNaziv() {
+		return this.naziv;
+	}
+
+	public void setNaziv(String naziv) {
+		this.naziv = naziv;
+	}
+	
 	public int getMatBroj() {
 		return this.matBroj;
 	}
