@@ -18,13 +18,13 @@ public class LoginPostAction extends AbstractAction {
 
 		
 		//ovo posle otkomentarisi
-//		User user = login(request);
+		User user = login(request);
 		
 		
 		//ovo posle brisi
-		User user = new User();
-		user.setUsername("admin");
-		user.setPassword("admin");
+//		User user = new User();
+//		user.setUsername("admin");
+//		user.setPassword("admin");
 		
 		
 		
@@ -33,10 +33,10 @@ public class LoginPostAction extends AbstractAction {
 			
 			HttpSession session = request.getSession(true);
 //			ovo posle otkoment
-//			if(session.getAttribute("loginUser")!=null) {
-//				request.setAttribute("error_message", "vec ste ulogovani kao "+((User)session.getAttribute("loginUser")).getUsername());
-//				return WebConstant.PAGE_LOGIN;
-//			}
+			if(session.getAttribute("loginUser")!=null) {
+				request.setAttribute("error_message", "vec ste ulogovani kao "+((User)session.getAttribute("loginUser")).getUsername());
+				return WebConstant.PAGE_LOGIN;
+			}
 			
 			
 			
