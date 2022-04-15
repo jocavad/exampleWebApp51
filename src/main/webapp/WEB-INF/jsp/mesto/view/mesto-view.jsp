@@ -29,10 +29,6 @@
 								<c:param name="ptt" value="${mes.ptt}"/>
 							</c:url> <a href="${urlview}">izmena</a>
 						</th>
-						<th><c:url var="urlview" value="/application/mesto/del">
-								<c:param name="ptt" value="${mes.ptt}"/>
-							</c:url> <a href="${urlview}">brisanje</a>
-						</th>
 					</tr>
 				</c:forEach>
 			</tbody>
