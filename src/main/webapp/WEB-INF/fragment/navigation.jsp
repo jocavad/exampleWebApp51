@@ -6,6 +6,8 @@
 <%-- <c:url value="/application/proizvodjac/edit" var="proizvEdit"/> --%>
 <%-- <c:url value="/application/proizvodjac/del" var="proizvDelete"/> --%>
 <c:url value="/application/proizvodjac" var="proizvViewAll"/>
+<c:url value="/application/mesto" var="mestoViewAll"/>
+<c:url value="/application/mesto/add" var="mestoAdd"/>
 
 <div>
 	<nav>
@@ -13,6 +15,7 @@
 <%-- 		<a href="${proizvEdit}">promeni proizvodjaca</a> --%>
 		<a href="${proizvViewAll}">pregled svih proizvodjaca</a>
 <%-- 		<a href="${proizvEdit}">obrisi proizvodjaca</a> --%>
-
+		<a href="${mestoViewAll}">pregled svih mesta</a>
+		<a href="${mestoAdd}">dodaj mesto</a>
 	</nav>
 </div>

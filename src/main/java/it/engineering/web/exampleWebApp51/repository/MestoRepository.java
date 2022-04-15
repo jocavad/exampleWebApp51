@@ -16,7 +16,7 @@ public class MestoRepository {
 							.createEntityManager();
 		
 		List<Mesto> mesta = em
-				.createQuery("select m from mesto m", Mesto.class)
+				.createQuery("select m from Mesto m", Mesto.class)
 				.getResultList();
 		
 		em.close();

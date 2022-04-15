@@ -10,6 +10,9 @@ import it.engineering.web.exampleWebApp51.action.login.LoginCheckAction;
 import it.engineering.web.exampleWebApp51.action.login.LoginGetAction;
 import it.engineering.web.exampleWebApp51.action.login.LoginPostAction;
 import it.engineering.web.exampleWebApp51.action.login.LogoutAction;
+import it.engineering.web.exampleWebApp51.action.mesto.add.MestoAddAction;
+import it.engineering.web.exampleWebApp51.action.mesto.add.MestoAddStoreAction;
+import it.engineering.web.exampleWebApp51.action.mesto.view.MestoViewAllAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.add.ProizvodjacAddAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.add.ProizvodjacAddStoreAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.del.ProizvodjacDelAction;
@@ -75,6 +78,15 @@ public class ActionFactory {
 				break;
 			case WebConstant.PATH_PROIZV_DEL_STORE:
 				action = new ProizvodjacDelStoreAction();
+				break;
+			case WebConstant.PATH_MESTO_VIEW_ALL:
+				action = new MestoViewAllAction();
+				break;
+			case WebConstant.PATH_MESTO_ADD:
+				action = new MestoAddAction();
+				break;
+			case WebConstant.PATH_MESTO_ADD_STORE:
+				action = new MestoAddStoreAction();
 				break;
 			default:
 				break;

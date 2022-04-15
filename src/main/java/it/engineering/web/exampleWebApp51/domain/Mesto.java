@@ -27,6 +27,11 @@ public class Mesto implements Serializable {
 	public Mesto() {
 	}
 
+	public Mesto(int ptt, String naziv) {
+		this.ptt = ptt;
+		this.naziv = naziv;
+	}
+
 	public int getPtt() {
 		return this.ptt;
 	}

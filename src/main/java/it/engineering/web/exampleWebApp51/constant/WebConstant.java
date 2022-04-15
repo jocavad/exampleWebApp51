@@ -29,4 +29,18 @@ public interface WebConstant {
 	public static final String PATH_PROIZV_DEL="/proizvodjac/del";
 	
 	public static final String PATH_PROIZV_DEL_STORE="/proizvodjac/del-store";
+	
+	public static final String PAGE_MESTO_ADD="/WEB-INF/jsp/mesto/add/mesto-add.jsp";
+	public static final String PATH_MESTO_ADD="/mesto/add";
+	
+	public static final String PATH_MESTO_ADD_STORE="/mesto/add-store";
+	
+	public static final String PAGE_MESTO_EDIT="/WEB-INF/jsp/mesto/edit/mesto-edit.jsp";
+	public static final String PATH_MESTO_EDIT="/mesto/edit";
+	
+	public static final String PATH_MESTO_EDIT_STORE="/mesto/edit-store";
+	
+	public static final String PAGE_MESTO_VIEW_ALL="/WEB-INF/jsp/mesto/view/mesto-view.jsp";
+	public static final String PATH_MESTO_VIEW_ALL="/mesto";
+	
 }
