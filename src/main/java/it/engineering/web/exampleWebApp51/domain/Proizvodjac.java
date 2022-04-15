@@ -14,15 +14,15 @@ public class Proizvodjac implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int pib;
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+	private String pib;
 
 	private String naziv;
 	
 	private String adresa;
 
 	@Column(name="mat_broj")
-	private int matBroj;
+	private String matBroj;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="ptt")
@@ -31,7 +31,7 @@ public class Proizvodjac implements Serializable {
 	public Proizvodjac() {
 	}
 
-	public Proizvodjac(int pib, String naziv, String adresa, int matBroj, Mesto mesto) {
+	public Proizvodjac(String pib, String naziv, String adresa, String matBroj, Mesto mesto) {
 		super();
 		this.pib = pib;
 		this.naziv = naziv;
@@ -42,11 +42,11 @@ public class Proizvodjac implements Serializable {
 
 
 
-	public int getPib() {
+	public String getPib() {
 		return this.pib;
 	}
 
-	public void setPib(int pib) {
+	public void setPib(String pib) {
 		this.pib = pib;
 	}
 
@@ -66,11 +66,11 @@ public class Proizvodjac implements Serializable {
 		this.naziv = naziv;
 	}
 	
-	public int getMatBroj() {
+	public String getMatBroj() {
 		return this.matBroj;
 	}
 
-	public void setMatBroj(int matBroj) {
+	public void setMatBroj(String matBroj) {
 		this.matBroj = matBroj;
 	}
 

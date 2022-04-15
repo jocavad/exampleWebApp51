@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import it.engineering.web.exampleWebApp51.domain.Mesto;
 import it.engineering.web.exampleWebApp51.domain.Proizvodjac;
 import it.engineering.web.exampleWebApp51.persistence.MyEMF;
 
@@ -26,7 +27,7 @@ public class ProizvodjacRepository {
 	}
 	
 	
-	public Proizvodjac findByPib(int pib) {
+	public Proizvodjac findByPib(String pib) {
 		EntityManager em = MyEMF.getEntityManagerFactorty()
 				.createEntityManager();
 		

@@ -13,7 +13,7 @@ public class ProizvodjacViewAction extends AbstractAction{
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
 		Proizvodjac pr = ProizvodjacRepository.getInstance()
-				.findByPib(Integer.parseInt(request.getParameter("pib")));
+				.findByPib(request.getParameter("pib"));
 		request.setAttribute("przv", pr);
 		return WebConstant.PAGE_PROIZV_VIEW;
 	}

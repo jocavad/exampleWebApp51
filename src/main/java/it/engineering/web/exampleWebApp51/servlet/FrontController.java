@@ -1,6 +1,8 @@
 package it.engineering.web.exampleWebApp51.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import it.engineering.web.exampleWebApp51.controller.ApplicationController;
+import it.engineering.web.exampleWebApp51.domain.User;
 
 
 /**
@@ -50,5 +53,7 @@ public class FrontController extends HttpServlet {
 		super.init();
 		applicationController = new ApplicationController();
 		System.out.println("===========(created application controller)");
+		getServletContext().setAttribute("logged_in_users", new ArrayList<User>());
+		
 	}
 }

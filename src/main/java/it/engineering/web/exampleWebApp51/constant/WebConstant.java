@@ -20,5 +20,8 @@ public interface WebConstant {
 	
 	public static final String PATH_PROIZV_EDIT_STORE="/proizvodjac/edit-store";
 
+	public static final String PAGE_PROIZV_ADD="/WEB-INF/jsp/proizv/add/proizv-add.jsp";
+	public static final String PATH_PROIZV_ADD="/proizvodjac/add";
 	
+	public static final String PATH_PROIZV_ADD_STORE="/proizvodjac/add-store";
 }

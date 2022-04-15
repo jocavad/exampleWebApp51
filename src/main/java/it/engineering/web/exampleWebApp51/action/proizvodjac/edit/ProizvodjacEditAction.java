@@ -13,7 +13,7 @@ public class ProizvodjacEditAction extends AbstractAction {
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
 		Proizvodjac pr = ProizvodjacRepository.getInstance()
-				.findByPib(Integer.parseInt(request.getParameter("pib")));
+				.findByPib(request.getParameter("pib"));
 		request.setAttribute("przv", pr);
 		String action = request.getParameter("action");
 		if("cancel".equals(action)) {

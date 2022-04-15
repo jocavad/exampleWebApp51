@@ -18,7 +18,8 @@ public class LoginPostAction extends AbstractAction {
 
 		
 		//ovo posle otkomentarisi
-		User user = login(request);
+		List<User> lUsers = (List<User>)request.getServletContext().getAttribute("logged_in_users");
+		User user = login(request, lUsers);
 		
 		
 		//ovo posle brisi
@@ -33,11 +34,14 @@ public class LoginPostAction extends AbstractAction {
 			
 			HttpSession session = request.getSession(true);
 //			ovo posle otkoment
-			if(session.getAttribute("loginUser")!=null) {
-				request.setAttribute("error_message", "vec ste ulogovani kao "+((User)session.getAttribute("loginUser")).getUsername());
-				return WebConstant.PAGE_LOGIN;
-			}
 			
+			lUsers.add(user);
+			
+//			if(session.getAttribute("loginUser")!=null) {
+//				request.setAttribute("error_message", "vec ste ulogovani kao "+((User)session.getAttribute("loginUser")).getUsername());
+//				return WebConstant.PAGE_LOGIN;
+//			}
+//			
 			
 			
 			//ovo brisi
@@ -54,13 +58,12 @@ public class LoginPostAction extends AbstractAction {
 			return WebConstant.PAGE_HOME;
 		}else {
 			//ubaciti poruku za korisnika
-			request.setAttribute("error_message", "korisnik ne postoji/pogresna sifra");
 			return WebConstant.PAGE_LOGIN;
 		}
 
 	}
 	
-	private User login(HttpServletRequest request) {
+	private User login(HttpServletRequest request, List<User> lUsers) {
 		String username = request.getParameter("username");
 //		String password = request.getParameter("password");
 		
@@ -79,9 +82,16 @@ public class LoginPostAction extends AbstractAction {
 //			}
 //		}
 		User u = UserRepository.getInstance().findByUsername(username);
+		
+		if(lUsers.contains(u)) {
+			request.setAttribute("error_message", "vec ste ulogovani");
+			return null;
+		}
+		
 		if (u!=null && u.getPassword().equals(request.getParameter("password"))) {
 			return u;
 		}else {
+			request.setAttribute("error_message", "korisnik ne postoji/pogresna sifra");
 			return null;
 		}
 	}
