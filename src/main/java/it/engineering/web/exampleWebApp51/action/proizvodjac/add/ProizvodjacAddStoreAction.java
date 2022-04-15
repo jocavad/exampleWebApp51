@@ -15,24 +15,24 @@ public class ProizvodjacAddStoreAction extends AbstractAction {
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
 		
-		Mesto mes = MestoRepository.getInstance()
-							.findByPtt(Integer.parseInt(request.getParameter("mesto")));
-//		Mesto mes = new Mesto();
-//		mes.setPtt(Integer.parseInt(request.getParameter("mesto")));
-//		
-//		
-		Proizvodjac pr = new Proizvodjac(request.getParameter("pib")
-										,request.getParameter("naziv")
-										,request.getParameter("adresa")
-										,request.getParameter("matBroj")
-										,mes
-										);
+
 		
 		String action = request.getParameter("action");
 		if("cancel".equals(action)) {
-			request.setAttribute("przv", pr);
-			return WebConstant.PAGE_PROIZV_ADD;
+//			request.setAttribute("przv", pr);
+			return WebConstant.PAGE_HOME;
 		}else {
+			Mesto mes = MestoRepository.getInstance()
+					.findByPtt(Integer.parseInt(request.getParameter("mesto")));
+			//Mesto mes = new Mesto();
+			//mes.setPtt(Integer.parseInt(request.getParameter("mesto")));
+			
+			Proizvodjac pr = new Proizvodjac(request.getParameter("pib")
+								,request.getParameter("naziv")
+								,request.getParameter("adresa")
+								,request.getParameter("matBroj")
+								,mes
+								);
 			if(ProizvodjacRepository.getInstance()
 					.findByPib(request.getParameter("pib")) != null) {
 				request.setAttribute("przv", pr);

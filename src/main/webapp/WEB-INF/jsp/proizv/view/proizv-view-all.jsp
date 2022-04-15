@@ -13,7 +13,7 @@
 	<jsp:include page="/WEB-INF/fragment/navigation.jsp" flush="true"/>
 </header>
 	<div>
-		<table>
+		<table border="1">
 			<thead>
 				<tr>
 					<th>pib</th>
@@ -27,7 +27,12 @@
 						<th>${przv.naziv}</th>
 						<th><c:url var="urlview" value="/application/proizvodjac/view">
 								<c:param name="pib" value="${przv.pib}"/>
-							</c:url> <a href="${urlview }">pregled proizvodjaca</a></th>
+							</c:url> <a href="${urlview }">pregled proizvodjaca</a>
+						</th>
+						<th><c:url var="urlview" value="/application/proizvodjac/del">
+								<c:param name="pib" value="${przv.pib}"/>
+							</c:url> <a href="${urlview }">brisanje proizvodjaca</a>
+						</th>
 					</tr>
 				</c:forEach>
 			</tbody>

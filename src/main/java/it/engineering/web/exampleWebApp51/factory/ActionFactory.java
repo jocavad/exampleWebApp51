@@ -12,6 +12,8 @@ import it.engineering.web.exampleWebApp51.action.login.LoginPostAction;
 import it.engineering.web.exampleWebApp51.action.login.LogoutAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.add.ProizvodjacAddAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.add.ProizvodjacAddStoreAction;
+import it.engineering.web.exampleWebApp51.action.proizvodjac.del.ProizvodjacDelAction;
+import it.engineering.web.exampleWebApp51.action.proizvodjac.del.ProizvodjacDelStoreAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.edit.ProizvodjacEditAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.edit.ProizvodjacEditStoreAction;
 import it.engineering.web.exampleWebApp51.action.proizvodjac.view.ProizvodjacViewAction;
@@ -67,6 +69,12 @@ public class ActionFactory {
 				break;
 			case WebConstant.PATH_PROIZV_ADD_STORE:
 				action = new ProizvodjacAddStoreAction();
+				break;
+			case WebConstant.PATH_PROIZV_DEL:
+				action = new ProizvodjacDelAction();
+				break;
+			case WebConstant.PATH_PROIZV_DEL_STORE:
+				action = new ProizvodjacDelStoreAction();
 				break;
 			default:
 				break;

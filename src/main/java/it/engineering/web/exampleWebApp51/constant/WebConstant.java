@@ -24,4 +24,9 @@ public interface WebConstant {
 	public static final String PATH_PROIZV_ADD="/proizvodjac/add";
 	
 	public static final String PATH_PROIZV_ADD_STORE="/proizvodjac/add-store";
+	
+	public static final String PAGE_PROIZV_DEL="/WEB-INF/jsp/proizv/del/proizv-del.jsp";
+	public static final String PATH_PROIZV_DEL="/proizvodjac/del";
+	
+	public static final String PATH_PROIZV_DEL_STORE="/proizvodjac/del-store";
 }

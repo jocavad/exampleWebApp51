@@ -30,7 +30,7 @@
 				<input type="submit" name="action" value="cancel">
 			</div>
 			<div>
-				<input type="submit" name="action" value="edit">
+				<input type="submit" name="action" value="add">
 			</div>
 		</form>
 	</div>
