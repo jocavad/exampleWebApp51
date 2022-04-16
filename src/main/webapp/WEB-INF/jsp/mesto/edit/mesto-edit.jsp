@@ -8,22 +8,32 @@
 <title>promena mesta</title>
 </head>
 <body>
-	<div>
+	<header>
+		<jsp:include page="/WEB-INF/fragment/login-user.jsp" flush="true" />
+		<jsp:include page="/WEB-INF/fragment/navigation.jsp" flush="true" />
+	</header>
+	<div class="row d-flex justify-content-center">
 	${error}
+	<div class="col-md-6">
 		<form action="/exampleWebApp51/application/mesto/edit-store">
+			<div class="form-group w-50 text-center">
 			<label>ptt</label>
-			<input type="text" name="ptt" value="${mes.ptt}" readonly="readonly" />
-			<br>
+			<input class="form-control" type="text" name="ptt" value="${mes.ptt}" readonly="readonly" />
+			</div>
+			<div class="form-group w-50 text-center">
 			<label>naziv</label>
-			<input type="text" name="naziv" value="${mes.naziv}" />
-			<br>
-			<div>
+			<input class="form-control" type="text" name="naziv" value="${mes.naziv}" />
+			</div>
+			<div class="d-flex justify-content-left mb-3">
+			<div class="p-2 col-example">
 				<input type="submit" name="action" value="cancel">
 			</div>
-			<div>
+			<div class="p-2 col-example">
 				<input type="submit" name="action" value="edit">
 			</div>
+			</div>
 		</form>
+		</div>
 	</div>
 </body>
 </html>

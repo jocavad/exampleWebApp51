@@ -8,30 +8,43 @@
 <title>brisanje proizvodjaca</title>
 </head>
 <body>
-	<div>
+	<header>
+		<jsp:include page="/WEB-INF/fragment/login-user.jsp" flush="true" />
+		<jsp:include page="/WEB-INF/fragment/navigation.jsp" flush="true" />
+	</header>
+	<div class="row d-flex justify-content-center">
+		<div class="col-md-6">
 		<form action="/exampleWebApp51/application/proizvodjac/del-store">
+			<div class="form-group w-50 text-center">
 			<label>pib</label>
-			<input type="text" name="pib" value="${przv.pib}" readonly="readonly" />
-			<br>
+			<input class="form-control" type="text" name="pib" value="${przv.pib}" readonly="readonly" />
+			</div>
+			<div class="form-group w-50 text-center">
 			<label>maticni broj</label>
-			<input type="text" name="matBroj" value="${przv.matBroj}" readonly="readonly" />
-			<br>
+			<input class="form-control" type="text" name="matBroj" value="${przv.matBroj}" readonly="readonly" />
+			</div>
+			<div class="form-group w-50 text-center">
 			<label>naziv</label>
-			<input type="text" name="naziv" value="${przv.naziv}" readonly="readonly"/>
-			<br>
+			<input class="form-control" type="text" name="naziv" value="${przv.naziv}" readonly="readonly"/>
+			</div>
+			<div class="form-group w-50 text-center">
 			<label>adresa</label>
-			<input type="text" name="adresa" value="${przv.adresa}" readonly="readonly"/>
-			<br>
+			<input class="form-control" type="text" name="adresa" value="${przv.adresa}" readonly="readonly"/>
+			</div>
+			<div class="form-group w-50 text-center">
 			<label>mesto</label>
-			<input type="text" name="mesto" value="${przv.mesto.ptt}" readonly="readonly"/>
-			<br>
-			<div>
+			<input class="form-control" type="text" name="mesto" value="${przv.mesto.ptt}" readonly="readonly"/>
+			</div>
+			<div class="d-flex justify-content-left mb-3">
+			<div class="p-2 col-example">
 				<input type="submit" name="action" value="cancel">
 			</div>
-			<div>
+			<div class="p-2 col-example">
 				<input type="submit" name="action" value="delete">
 			</div>
+			</div>
 		</form>
+		</div>
 	</div>
 </body>
 </html>

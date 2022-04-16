@@ -12,7 +12,8 @@
 	<jsp:include page="/WEB-INF/fragment/login-user.jsp" flush="true"/>
 	<jsp:include page="/WEB-INF/fragment/navigation.jsp" flush="true"/>
 </header>
-	<div>
+	<div class="row justify-content-center">
+		<div class="col-auto">
 		<table border="1">
 			<thead>
 				<tr>
@@ -33,6 +34,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		</div>
 	</div>
 </body>
 </html>

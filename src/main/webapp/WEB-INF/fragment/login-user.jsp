@@ -4,11 +4,12 @@
 
 
 <c:url value="/application/logout" var="urllogout"></c:url>
-<div>
-	
-	prijavljeni ster kao: ${loginUser.username}, <a href="${urllogout}">odjavite se</a>
-	<br/>
+<div class="container-l bg-light vh-50">
+	<div class="d-flex justify-content-between bg-light mb-3">
+		<div class="p-2 col-example">prijavljeni ste kao: ${loginUser.username}</div>
+		<div class="p-2 col-example"><a href="${urllogout}">odjavite se</a></div>
+	</div>
 <!-- <!-- sa session scope varijablom -->
-	prijavljeni ster kao: ${sessionScope.loginUser.username}
+<%-- 	prijavljeni ster kao: ${sessionScope.loginUser.username} --%>
 
 </div>

@@ -10,15 +10,17 @@
 
 
 <main>
-	<h2>dobro dosli, prijava je uspesna</h2>
+<div class="text-center">
+	<h2>dobro dosli</h2>
 	<article>
 		<div>
 			pocetna strana
 		</div>
 	</article>
+</div>
 </main>
-
+<div class="text-center">
 <footer> Copyright 2022.</footer>
-
+</div>
 </body>
 </html>
