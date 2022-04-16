@@ -23,6 +23,7 @@
 			<div class="form-group w-50 text-center">
 			<label>naziv</label>
 			<input class="form-control" type="text" name="naziv" value="${mes.naziv}" />
+			${naziv_error}
 			</div>
 			<div class="d-flex justify-content-left mb-3">
 			<div class="p-2 col-example">

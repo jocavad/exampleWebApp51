@@ -2,6 +2,8 @@ package it.engineering.web.exampleWebApp51.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.Size;
+
 import java.util.List;
 
 
@@ -17,7 +19,8 @@ public class Mesto implements Serializable {
 	@Id
 //	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int ptt;
-
+	
+	@Size(min = 2, message = "minimum size is {min}")
 	private String naziv;
 
 	//bi-directional many-to-one association to Proizvodjac
