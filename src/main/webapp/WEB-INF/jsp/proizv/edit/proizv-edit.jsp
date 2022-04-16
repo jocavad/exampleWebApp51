@@ -24,8 +24,12 @@
 			<input type="text" name="adresa" value="${przv.adresa}" />
 			<br>
 			<label>mesto</label>
-			<input type="text" name="mesto" value="${przv.mesto.ptt}" />
-			<br>
+			<select name="mesto" id="mesto">
+				<c:forEach items="${mesta}" var="mes">
+    				<option value="${mes.ptt}" ${mes.ptt == selected ? 'selected':''}>${mes.naziv}</option>
+    			</c:forEach>
+  			</select>
+  			<br>
 			<div>
 				<input type="submit" name="action" value="cancel">
 			</div>

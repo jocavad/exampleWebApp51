@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import it.engineering.web.exampleWebApp51.action.AbstractAction;
 import it.engineering.web.exampleWebApp51.constant.WebConstant;
 import it.engineering.web.exampleWebApp51.domain.Proizvodjac;
+import it.engineering.web.exampleWebApp51.repository.MestoRepository;
 import it.engineering.web.exampleWebApp51.repository.ProizvodjacRepository;
 
 public class ProizvodjacEditAction extends AbstractAction {
@@ -20,7 +21,10 @@ public class ProizvodjacEditAction extends AbstractAction {
 			request.setAttribute("proizvodjaci", ProizvodjacRepository.getInstance().getAll());
 			return WebConstant.PAGE_PROIZV_VIEW_ALL;
 		}else {
+			request.setAttribute("mesta", MestoRepository.getInstance()
+					.getAll());
 			request.setAttribute("przv", pr);
+			request.setAttribute("selected", pr.getMesto().getPtt());
 			return WebConstant.PAGE_PROIZV_EDIT;	
 		}
 	}
